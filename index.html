@@ -3,142 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scroll-Controlled Video Animation</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      height: 300vh; /* Make the page longer to allow scrolling */
-    }
-    
-    .container {
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    
-    .video-container {
-      width: 100%;
-      position: relative;
-    }
-    
-    video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    .content {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-      text-align: center;
-      margin-top: 20px;
-    }
-    
-    .content.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .content h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    
-    .content p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto 20px;
-    }
-  </style>
+  <title>Portfolio website</title>
+  <link rel="stylesheet" href="./index.css"> 
+  <script src="./main.js" defer></script> 
 </head>
 <body>
-  <div class="container">
-    <div class="video-container">
-      <!-- Replace with your actual video -->
-      <video id="animation" playsinline muted>
-        <source src="./static/0001-0060.mkv" type="video/mp4">
-      </video>
-    </div>
-    
-    <div id="content1" class="content">
-      <h1>Welcome to Our Platform</h1>
-      <p>Experience the next generation of digital innovation with our cutting-edge solutions.</p>
-    </div>
-    
-    <div id="content2" class="content">
-      <p>Our technology transforms how you interact with digital content, creating seamless and intuitive experiences.</p>
-    </div>
-    
-    <div id="content3" class="content">
-      <p>Discover what's possible when innovation meets design excellence.</p>
-    </div>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const video = document.getElementById('animation');
-      const contentElements = document.querySelectorAll('.content');
-      
-      // Set up video
-      video.pause();
-      video.currentTime = 0;
-      
-      // Video duration in seconds (replace with your actual video duration)
-      const videoDuration = 2; 
-      
-      // Calculate the scroll distance needed to play the full video
-      const scrollDistance = window.innerHeight * 0.5;
-      
-      // Track if the video has completed
-      let videoCompleted = false;
-      
-      // Function to handle scroll
-      window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY * 0.1;
-        
-        // Map scroll position to video progress
-        if (scrollPosition <= scrollDistance) {
-          // Control video playback based on scroll
-          const scrollProgress = scrollPosition / scrollDistance;
-          const targetTime = scrollProgress * videoDuration;
-          
-          // Set video time
-          if (targetTime <= videoDuration) {
-            video.currentTime = targetTime;
-            videoCompleted = (targetTime >= videoDuration - 0.1);
-          }
-        } else if (!videoCompleted) {
-          // Ensure video completes
-          video.currentTime = videoDuration;
-          videoCompleted = true;
-        }
-        
-        // Show content after video completes
-        if (videoCompleted) {
-          const scrollBeyondVideo = scrollPosition - scrollDistance;
-          
-          // Reveal content items based on additional scrolling
-          contentElements.forEach((content, index) => {
-            // Show content items sequentially as user scrolls further
-            if (scrollBeyondVideo > index * 100) {
-              content.classList.add('visible');
-            } else {
-              content.classList.remove('visible');
-            }
-          });
-        }
-      });
-    });
-  </script>
+  <video id="vid" preload="auto" muted>
+    <source type="video/mp4" src="./static/final.mp4" />
+  </video>
+  <button id="forward">Play forward</button>  
+  <button id="back">Play backwards</button>
 </body>
 </html>
