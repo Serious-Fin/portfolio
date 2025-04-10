@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Serious-Fin/portfolio/issues"
   },
-  "homepage": "https://github.com/Serious-Fin/portfolio#readme"
+  "homepage": "https://github.com/Serious-Fin/portfolio#readme",
+  "dependencies": {
+    "fullpage.js": "^4.0.35"
+  }
 }
