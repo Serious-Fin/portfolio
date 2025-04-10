@@ -1,6 +1,7 @@
 const video = document.getElementById("video");
 const forward = document.getElementById("forward");
 const back = document.getElementById("back");
+const text = document.getElementsByClassName("intro-text");
 
 let duration = 0;
 let midwayPoint = 0;
@@ -38,8 +39,28 @@ back.addEventListener("click", () => {
 });
 
 video.addEventListener("timeupdate", () => {
-    if (isOpening && video.currentTime >= 2) {
+    if (isOpening && video.currentTime > 2) {
         video.currentTime = midwayPoint; // Video plays past the 2s mark so we need to reset it back to midway
         video.pause();
+        showText();
+    }
+
+    if (!isOpening || video.currentTime !== 2) {
+        hideText();
     }
 });
+
+function showText() {
+    console.log("run show");
+    console.log(text);
+    for (let i = 0; i < text.length; i++) {
+        text[i].classList.remove("invisible");
+    }
+}
+
+function hideText() {
+    console.log("run hide");
+    for (let i = text.length - 1; i >= 0; i--) {
+        text[i].classList.add("invisible");
+    }
+}

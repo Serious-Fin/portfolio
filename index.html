@@ -1,17 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio website</title>
-  <link rel="stylesheet" href="./index.css"> 
-  <script src="./main.js" defer></script> 
-</head>
-<body>
-  <video id="video" preload="auto" muted>
-    <source type="video/mp4" src="./static/final.mp4" />
-  </video>
-  <button id="forward">Play forward</button>  
-  <button id="back">Play backwards</button>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio website</title>
+        <link rel="stylesheet" href="./index.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./node_modules/fullpage.js/dist/fullpage.css"
+        />
+        <script
+            type="text/javascript"
+            src="./node_modules/fullpage.js/dist/fullpage.js"
+        ></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+        />
+        <script src="./scripts/main.js" defer></script>
+    </head>
+    <body>
+        <div id="fullpage">
+            <!-- Video + short about me -->
+            <div class="section">
+                <div class="video-text-container">
+                    <video id="video" preload="auto" muted>
+                        <source type="video/mp4" src="./static/final.mp4" />
+                    </video>
+                    <pre class="intro-text invisible">
+Hi, my name is Augustas
+
+Here's my quick introduction
+
+<svg
+id="bouncing"
+width="24"
+height="24"
+viewBox="0 0 24 24"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+    d="M6 9L12 15L18 9"
+    stroke="white"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>
+</svg>
+                    </pre>
+
+                    <div>
+                        <p class="intro-text invisible">
+                            Hi, my name is Augustas
+                        </p>
+                        <p class="intro-text invisible">Here's my portfolio</p>
+                    </div>
+                </div>
+                <button id="forward">Play forward</button>
+                <button id="back">Play backwards</button>
+            </div>
+
+            <!-- Longer about me: contcts, photo, social media links -->
+            <div class="section">
+                <p>Contacts</p>
+                <p>Photo</p>
+                <p>About me</p>
+            </div>
+
+            <!-- Project one (AI drawing platform) -->
+            <div class="section">Some section</div>
+
+            <!-- Project two (Company landing page) -->
+            <div class="section">Some section</div>
+        </div>
+        <script src="./scripts/loadFullpage.js"></script>
+    </body>
 </html>
