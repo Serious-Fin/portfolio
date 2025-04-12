@@ -170,6 +170,22 @@ body {
     }
 }
 
+@media (max-width: 640px) {
+    #about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #about h2 {
+        grid-area: 1 / 1 / 2 / 2;
+        justify-self: center;
+    }
+
+    #about img {
+        display: none;
+    }
+}
+
 /* FONTS */
 .lato-thin {
     font-family: "Lato", sans-serif;
