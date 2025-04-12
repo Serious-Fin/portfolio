@@ -1,4 +1,4 @@
-const video = document.getElementById("video");
+const video = document.getElementById("intro-video");
 const forward = document.getElementById("forward");
 const back = document.getElementById("back");
 const text = document.getElementsByClassName("intro-text");
