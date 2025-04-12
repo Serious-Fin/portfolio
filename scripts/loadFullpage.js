@@ -20,6 +20,7 @@ const video = document.getElementById("intro-video");
 const forward = document.getElementById("forward");
 const back = document.getElementById("back");
 const text = document.getElementsByClassName("intro-text");
+const scrollTips = document.getElementsByClassName("intro-tip");
 
 let duration = 0;
 let midwayPoint = 0;
@@ -33,6 +34,7 @@ video.onloadeddata = () => {
 
 function playOpenAnimation() {
     isOpening = true;
+    hideScrollTip();
     if (video.currentTime === midwayPoint) {
         return;
     }
@@ -57,27 +59,42 @@ function playCloseAnimation() {
 }
 
 video.addEventListener("timeupdate", () => {
-    if (isOpening && video.currentTime > 2) {
+    if (isOpening && video.currentTime > midwayPoint) {
         hasAnimationPlayed = true;
         video.currentTime = midwayPoint;
         video.pause();
-        showText();
+        showAboutText();
     }
 
-    if (!isOpening || video.currentTime !== 2) {
-        hideText();
+    if (!isOpening || video.currentTime !== midwayPoint) {
+        hideAboutText();
+    }
+
+    if (video.currentTime === 0 || video.currentTime === duration) {
+        showScrollTip();
     }
 });
 
-function showText() {
-    console.log(text);
+function showAboutText() {
     for (let i = 0; i < text.length; i++) {
         text[i].classList.remove("invisible");
     }
 }
 
-function hideText() {
+function hideAboutText() {
     for (let i = text.length - 1; i >= 0; i--) {
         text[i].classList.add("invisible");
+    }
+}
+
+function showScrollTip() {
+    for (let i = 0; i < scrollTips.length; i++) {
+        scrollTips[i].classList.remove("invisible");
+    }
+}
+
+function hideScrollTip() {
+    for (let i = scrollTips.length - 1; i >= 0; i--) {
+        scrollTips[i].classList.add("invisible");
     }
 }

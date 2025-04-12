@@ -90,6 +90,21 @@ body {
     box-sizing: border-box;
 }
 
+.intro-tip {
+    position: absolute;
+}
+
+#intro-tip1 {
+    color: white;
+    bottom: 8%;
+    left: 49.5%;
+}
+
+#intro-tip2 {
+    bottom: 5%;
+    left: 50%;
+}
+
 .project {
     gap: 30px;
 }
