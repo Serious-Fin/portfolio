@@ -9,6 +9,18 @@ body {
     background-color: black;
 }
 
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid white;
+}
+
+header a {
+    color: white;
+}
+
 .video-text-container {
     position: relative;
     display: flex;
@@ -36,19 +48,36 @@ body {
     color: #f3a2fc;
 }
 
+.gold {
+    color: #e6ec70;
+}
+
+.blue {
+    color: rgb(162, 162, 255);
+}
+
 .invisible {
     opacity: 0;
 }
 
 .header-text {
     color: white;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 700;
 }
 
 .content-text {
     color: white;
     font-size: 20px;
+    grid-area: 2 / 1 / 3 / 3;
+    padding: 10px 40px 10px 10px;
+}
+
+.technologies-text {
+    color: white;
+    font-size: 20px;
+    grid-area: 3 / 1 / 4 / 3;
+    padding: 10px 40px 10px 10px;
 }
 
 #about {
@@ -57,7 +86,7 @@ body {
     width: 80vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 #about h2 {
@@ -66,14 +95,9 @@ body {
     padding: 10px;
 }
 
-#about p {
-    grid-area: 2 / 1 / 3 / 3;
-    padding: 10px;
-}
-
 #about img {
     width: 300px;
-    grid-area: 1 / 3 / 3 / 4;
+    grid-area: 1 / 3 / 4 / 4;
     justify-content: center;
     align-self: center;
     border: 2px solid white;
@@ -106,11 +130,14 @@ body {
 }
 
 .project {
-    gap: 30px;
+    gap: 10px;
 }
 
 .socials {
-    gap: 17px;
+    gap: 25px;
+    width: fit-content;
+    justify-content: baseline;
+    align-items: baseline;
 }
 
 .social-block {
@@ -133,9 +160,10 @@ body {
 }
 
 .project-video {
-    width: 60%;
+    width: 50%;
     border: 5px solid rgb(233, 233, 233);
     border-radius: 20px;
+    margin: 40px 0;
 }
 
 .project-link {
