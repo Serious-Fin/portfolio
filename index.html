@@ -1,182 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Serious-Fin</title>
-        <link rel="stylesheet" href="./index.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serious-Fin</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <div id="fullpage">
-            <!-- Video + short about me -->
-            <div class="section">
-                <div class="video-text-container">
-                    <video
-                        id="intro-video"
-                        class="intro-video"
-                        preload="auto"
-                        muted
-                    >
-                        <source
-                            type="video/mp4"
-                            src="./static/computer-animation.mkv"
-                        />
-                    </video>
-                    <div id="intro-tip">
-                        <p class="intro-tip" id="intro-tip1">Scroll</p>
-                        <svg
-                            class="bouncing intro-tip"
-                            id="intro-tip2"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M6 9L12 15L18 9"
-                                stroke="white"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
-                    </div>
-                    <pre class="intro-text invisible">
-Hi, my name is <span class="pink">Serious-Fin</span>
-
-Let me show you what I do
-
-<svg
-class="bouncing"
-width="24"
-height="24"
-viewBox="0 0 24 24"
-fill="none"
-xmlns="http://www.w3.org/2000/svg"
->
-<path
-    d="M6 9L12 15L18 9"
-    stroke="white"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-/>
-</svg>
-                    </pre>
-                </div>
-            </div>
-
-            <!-- Longer about me: contcts, photo, social media links -->
-            <div class="section">
-                <div id="about">
-                    <h2 class="header-text">About</h2>
-                    <p class="content-text">
-                        I'm a freelance software engineer passionate about
-                        helping teams build
-                        <span class="pink">fast and reliable</span> full-stack
-                        web applications. My focus is on delivering both
-                        <span class="gold"
-                            >quality work and reliable results</span
-                        >.
-                    </p>
-                    <p class="technologies-text">
-                        Proficient in: <span class="blue">TypeScript</span>, Go,
-                        Python, C#, <span class="gold">JavaScript</span>,
-                        SvelteKit, Node.js, Express.js, HTML, CSS.
-                    </p>
-                    <img
-                        src="./static/selfie.jpg"
-                        alt="selfie of a person smiling"
-                    />
-                </div>
-            </div>
-
-            <!-- Project one (DB-Populator) -->
-            <div class="section">
-                <div class="page-block project">
-                    <h2 class="header-text">Project: AI Data Generation</h2>
-                    <video
-                        id="db-populator-video"
-                        preload="auto"
-                        muted
-                        autoplay
-                        class="project-video"
-                        loop
-                        controls
-                    >
-                        <source
-                            type="video/mp4"
-                            src="./static/db_populator.mkv"
-                        />
-                    </video>
-                    <p class="project-description">
-                        <a
-                            href="https://data-gen.eu/"
-                            class="project-link bouncing"
-                            target="_blank"
-                            >data-gen.eu</a
-                        >
-                        uses AI to generate realistic sample data and creates
-                        SQL queries to insert it into a database, based on the
-                        table structure you provide.
-                    </p>
-                    <p class="project-description">
-                        Frontend made with plain HTML, CSS and
-                        <span class="gold">JavaScript</span> while backend with
-                        <span class="blue">GoLang</span>. More info on
-                        <a
-                            href="https://github.com/Serious-Fin/db-populator"
-                            class="pink bouncing project-link"
-                            >GitHub.</a
-                        >
-                    </p>
-                </div>
-            </div>
-
-            <!-- Let's connect section -->
-            <div class="section">
-                <div class="page-block socials">
-                    <h2 class="header-text">Let's connect</h2>
-                    <div class="social-block">
-                        <p class="social-name">X</p>
-                        <a
-                            class="social-link pink"
-                            href="https://x.com/serious_fin"
-                            >@serious_fin</a
-                        >
-                    </div>
-                    <div class="social-block">
-                        <p class="social-name">GitHub</p>
-                        <a
-                            class="social-link pink"
-                            href="https://github.com/Serious-Fin"
-                            >Serious-Fin</a
-                        >
-                    </div>
-                    <div class="social-block">
-                        <p class="social-name">GMail</p>
-                        <a
-                            class="social-link pink"
-                            href="mailto:serious.fin.dev@gmail.com"
-                            >serious.fin.dev@gmail.com</a
-                        >
-                    </div>
-                </div>
-            </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="fullpage">
+      <!-- Intro animation -->
+      <div class="section">
+        <div class="video-text-container">
+          <div id="whoami" class="intro-tip">
+            <p><span class="pink">Serious-Fin's</span> Portfolio</p>
+          </div>
+          <video id="intro-video" class="intro-video" preload="auto" muted>
+            <source type="video/mp4" src="./static/computer-animation.mkv" />
+          </video>
+          <div id="intro-tip">
+            <p class="intro-tip" id="intro-tip1">Scroll</p>
+            <svg class="bouncing intro-tip" id="intro-tip2" width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
         </div>
-        <script src="./scripts/loadFullpage.js"></script>
-    </body>
+      </div>
+
+      <!-- Longer about me: contcts, photo, social media links -->
+      <div class="section">
+        <div id="about">
+          <h2 class="header-text">About</h2>
+          <p class="content-text">
+            I'm a freelance software engineer passionate about helping teams build
+            <span class="pink">fast and reliable</span> full-stack web applications. My focus is on delivering both
+            <span class="gold">quality work and reliable results</span>.
+          </p>
+          <p class="technologies-text">
+            Proficient in: <span class="blue">TypeScript</span>, Go, Python, C#, <span class="gold">JavaScript</span>, SvelteKit, Node.js, Express.js,
+            HTML, CSS.
+          </p>
+          <img src="./static/selfie.jpg" alt="selfie of a person smiling" />
+        </div>
+      </div>
+
+      <!-- Project one (DB-Populator) -->
+      <div class="section">
+        <div class="page-block project">
+          <h2 class="header-text">Project: AI Data Generation</h2>
+          <video id="db-populator-video" preload="auto" muted autoplay class="project-video" loop controls>
+            <source type="video/mp4" src="./static/db_populator.mkv" />
+          </video>
+          <p class="project-description">
+            <a href="https://data-gen.eu/" class="project-link bouncing" target="_blank">data-gen.eu</a>
+            uses AI to generate realistic sample data and creates SQL queries to insert it into a database, based on the table structure you provide.
+          </p>
+          <p class="project-description">
+            Frontend made with plain HTML, CSS and
+            <span class="gold">JavaScript</span> while backend with <span class="blue">GoLang</span>. More info on
+            <a href="https://github.com/Serious-Fin/db-populator" class="pink bouncing project-link">GitHub.</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Let's connect section -->
+      <div class="section">
+        <div class="page-block socials">
+          <h2 class="header-text">Let's connect</h2>
+          <div class="social-block">
+            <p class="social-name">X</p>
+            <a class="social-link pink" href="https://x.com/serious_fin">@serious_fin</a>
+          </div>
+          <div class="social-block">
+            <p class="social-name">GitHub</p>
+            <a class="social-link pink" href="https://github.com/Serious-Fin">Serious-Fin</a>
+          </div>
+          <div class="social-block">
+            <p class="social-name">GMail</p>
+            <a class="social-link pink" href="mailto:serious.fin.dev@gmail.com">serious.fin.dev@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/loadFullpage.js"></script>
+  </body>
 </html>

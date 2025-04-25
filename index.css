@@ -114,19 +114,31 @@ header a {
     box-sizing: border-box;
 }
 
+#whoami {
+    position: absolute;
+    top: 8%;
+}
+
+#whoami p {
+    color: white;
+    font-size: clamp(20px, 10vw, 50px);
+    font-weight: 600;
+}
+
 .intro-tip {
     position: absolute;
 }
 
 #intro-tip1 {
     color: white;
-    bottom: 8%;
-    left: 49.5%;
+    font-size: 20px;
+    bottom: 8.5%;
+    left: 49%;
 }
 
 #intro-tip2 {
     bottom: 5%;
-    left: 50%;
+    left: 49.5%;
 }
 
 .project {
