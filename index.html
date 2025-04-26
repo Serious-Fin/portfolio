@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="fullpage">
@@ -32,20 +33,48 @@
         </div>
       </div>
 
-      <!-- Longer about me: contcts, photo, social media links -->
+      <!-- About me section -->
       <div class="section">
-        <div id="about">
-          <h2 class="header-text">About</h2>
-          <p class="content-text">
-            I'm a freelance software engineer passionate about helping teams build
-            <span class="pink">fast and reliable</span> full-stack web applications. My focus is on delivering both
-            <span class="gold">quality work and reliable results</span>.
-          </p>
-          <p class="technologies-text">
-            Proficient in: <span class="blue">TypeScript</span>, Go, Python, C#, <span class="gold">JavaScript</span>, SvelteKit, Node.js, Express.js,
-            HTML, CSS.
-          </p>
-          <img src="./static/selfie.jpg" alt="selfie of a person smiling" />
+        <div class="aboutme decorative-box">
+          <img src="./static/selfie.jpg" alt="selfie of me with a cat" />
+          <div class="desc">
+            <p class="quote-symbol">"</p>
+            <p class="about-text">
+              I'm a freelance software engineer passionate about helping teams build <span class="pink">fast and reliable</span> full-stack web
+              applications. My focus is on delivering both <span class="pink">quality work and reliable results</span>.
+            </p>
+            <p class="quote">Let's build something amazing together</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="section">
+        <div class="skills">
+          <div class="card intermediate">
+            <p class="skill-name">C#</p>
+          </div>
+          <div class="card advanced">
+            <p class="skill-name">TypeScript</p>
+          </div>
+          <div class="card advanced">
+            <p class="skill-name">Go</p>
+          </div>
+          <div class="card advanced">
+            <p class="skill-name">HTML</p>
+          </div>
+          <div class="card advanced">
+            <p class="skill-name">CSS</p>
+          </div>
+          <div class="card advanced">
+            <p class="skill-name">JavaScript</p>
+          </div>
+          <div class="card beginner">
+            <p class="skill-name">Python</p>
+          </div>
+          <div class="card beginner">
+            <p class="skill-name">Java</p>
+          </div>
         </div>
       </div>
 
@@ -57,13 +86,10 @@
             <source type="video/mp4" src="./static/db_populator.mkv" />
           </video>
           <p class="project-description">
-            <a href="https://data-gen.eu/" class="project-link bouncing" target="_blank">data-gen.eu</a>
-            uses AI to generate realistic sample data and creates SQL queries to insert it into a database, based on the table structure you provide.
-          </p>
-          <p class="project-description">
-            Frontend made with plain HTML, CSS and
-            <span class="gold">JavaScript</span> while backend with <span class="blue">GoLang</span>. More info on
-            <a href="https://github.com/Serious-Fin/db-populator" class="pink bouncing project-link">GitHub.</a>
+            <a href="https://data-gen.eu/" class="project-link bouncing" target="_blank">data-gen.eu</a> is a tool that uses AI to generate realistic
+            sample data and create SQL queries for database insertion based on your table structure. The frontend is built with plain HTML, CSS, and
+            <span class="gold">JavaScript</span>, while the backend is powered by <span class="blue">GoLang</span>. Check out the source code on
+            <a href="https://github.com/Serious-Fin/db-populator" class="pink bouncing project-link">GitHub</a>.
           </p>
         </div>
       </div>

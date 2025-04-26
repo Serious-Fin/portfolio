@@ -62,7 +62,7 @@ header a {
 
 .header-text {
     color: white;
-    font-size: 36px;
+    font-size: clamp(12px, 6vw, 40px);
     font-weight: 700;
 }
 
@@ -121,12 +121,13 @@ header a {
 
 #whoami p {
     color: white;
-    font-size: clamp(20px, 10vw, 50px);
-    font-weight: 600;
+    font-size: clamp(20px, 6vw, 50px);
+    font-weight: 700;
 }
 
 .intro-tip {
     position: absolute;
+    transition: all 0.2s ease-in;
 }
 
 #intro-tip1 {
@@ -172,8 +173,8 @@ header a {
 }
 
 .project-video {
-    width: 50%;
-    border: 5px solid rgb(233, 233, 233);
+    width: clamp(250px, 90vw, 1000px);
+    border: 5px solid rgba(233, 233, 233, 0.678);
     border-radius: 20px;
     margin: 40px 0;
 }
@@ -186,10 +187,77 @@ header a {
 
 .project-description {
     color: white;
+    font-size: 16pt;
 }
 
 .bouncing {
     animation: bounce 1s linear infinite;
+}
+
+.aboutme {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    color: white;
+}
+
+.aboutme img {
+    width: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.678);
+    border-radius: 20px;
+}
+
+.desc {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.quote-symbol {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 100px;
+    height: 60px;
+}
+
+.about-text {
+    font-size: 25px;
+}
+
+.quote {
+    font-size: 20px;
+    opacity: 75%;
+}
+
+.skills {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid white;
+    padding: 20px;
+    font-size: 38px;
+    font-weight: 700;
+    text-shadow: #e6ec70;
+}
+
+.advanced {
+    color: gold;    
+}
+
+.intermediate {
+    color: silver;
+}
+
+.beginner {
+    color: rgb(218, 109, 109);
 }
 
 @keyframes bounce {
