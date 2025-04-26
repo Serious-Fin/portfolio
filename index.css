@@ -155,11 +155,12 @@ header a {
 
 .social-block {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     display: flex;
     flex-direction: row;
     justify-content: start;
     gap: 20px;
+    font-size: 16pt;
 }
 
 .social-name {
@@ -230,34 +231,6 @@ header a {
 .quote {
     font-size: 20px;
     opacity: 75%;
-}
-
-.skills {
-    border: 1px solid white;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    border: 1px solid white;
-    padding: 20px;
-    font-size: 38px;
-    font-weight: 700;
-    text-shadow: #e6ec70;
-}
-
-.advanced {
-    color: gold;    
-}
-
-.intermediate {
-    color: silver;
-}
-
-.beginner {
-    color: rgb(218, 109, 109);
 }
 
 @keyframes bounce {

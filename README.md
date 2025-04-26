@@ -4,6 +4,4 @@ This is my portfolio website created with HTML, CSS and JavaScript. Additionally
 
 TODO:
 
-- add skills
-- add navbar, but only after animation plays
 - Add some random rotating shapes throughout the webpage
